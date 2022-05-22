@@ -1,0 +1,163 @@
+/*
+Semana 7 Programacion Orientada a Objetos I.
+Prof.: ELIBETH EMILIA MIQUILENA.
+Marcelo Munizaga Rojas
+*/
+ 
+//Código Medio_Transporte 
+public class Medio_Transporte 
+{ 
+//Atributos 
+protected int id_Medios; 
+protected String Medios; 
+protected int Disponibles; 
+
+//constructores 
+Medio_Transporte public Medio_Transporte { 
+} 
+public Medio_Transporte(int id_Medios, String Medios, int Disponibles) {
+	this.id_Medios=id_Medios; this.Medios=Medios; 
+	this.Disponibles=Disponibles; 
+} 
+//set y get  
+public string getid_Medios(){ 
+	return id_Medios; 
+} 
+public int getMedios (){ 
+	return Medios; 
+} 
+public int getDisponibles(){ 
+	return Disponibles; 
+} 
+ 
+//Código Maritimos 
+public class Maritimos extends Medio_Transporte { 
+//atributos 
+	private string Yate; 
+	private string Barco; 
+
+//constructor maritimos 
+public Maritimos(){ 
+} 
+public Maritimos(String Yate, String Yate){ 
+	super(id_Medio, Medios, Disponibles); 
+	this.Yate=Yate;
+	this.Barco; 
+} 
+//Set y get 
+public void setYate(String Yate){ 
+		this.Yate=Yate; 
+} 
+public void setBarco(String Barco){ 
+	this.Barco=Barco; 
+} 
+public String getYate(){
+	return Yate; 
+}
+public String getBarco(){
+	return Barco; 
+}
+//muestrainformación 
+public void mostrar(){ 
+System.out.println(“El “+getYate() + “ está disponible: “+getDisponibles() + “); 
+System.out.println(“El “+getBarco() + “ está disponible: “+getDisponibles() + “); 
+
+}
+
+}
+
+
+//Código Aereos 
+public class Aereos extends Medio_Transporte 
+{ 
+//atributos 
+private string Avioneta; 
+private string Helicoptero; 
+
+//constructor Aereos 
+public Aereos(){ 
+} 
+public Aereos(String Avioneta, String Helicoptero){ 
+super(id_Medio, Medios, Disponibles); 
+this.Avioneta=Avioneta;
+this.Helicoptero=Helicoptero; 
+} 
+
+//Set y get 
+public void setAvioneta(String Avioneta){ 
+this.Avioneta=Avioneta; 
+} 
+public void setHelicoptero(String Helicoptero){ 
+this.Helicoptero=Helicoptero; 
+} 
+public String getAvioneta(){
+return Avioneta; 
+}
+public String getHelicoptero(){
+return Helicoptero; 
+}
+//muestrainformación 
+public void mostrar(){ 
+System.out.println(“El “+getAvioneta() + “, está disponible: “+getDisponibles() + “); 
+System.out.println(“El “+getHelicoptero() + “, está disponible: “+getDisponibles() + “); 
+
+}
+
+}
+
+
+//Código Terrestres 
+public class Terrestres extends Medio_Transporte 
+{
+//atributos 
+private string Automovil; 
+private string Bicicleta; 
+
+//constructor Terrestres 
+public Terrestres(){ 
+} 
+public Terrestres(String Automovil, String Bicicleta){ 
+super(id_Medio, Medios, Disponibles); 
+this.Automovil=Automovil;
+this.Bicicleta=Bicicleta; 
+} 
+//Set y get 
+public void setAutomovil(String Automovil){ 
+this.Automovil=Automovil; 
+} 
+public void setBicicleta(String Bicicleta){ 
+this.Bicicleta=Bicicleta; 
+} 
+
+public String getAutomovil(){
+return Automovil; 
+}
+public String getBicicleta(){
+return Bicicleta; 
+}
+//muestrainformación 
+public void mostrar(){ 
+System.out.println(“El “+getAutomovil() + “, está disponible: “+getDisponibles() + “); 
+System.out.println(“El “+getBicicleta() + “, está disponible: “+getDisponibles() + “); 
+
+}
+
+}
+
+ 
+//Código Main de superclase ‘Medio_Transporte’
+public class Main 
+{ 
+public static void main(String [] args){ 
+	//generamos instancias de sub clases 
+	Maritimo maritimo=new Maritimo(“Yate”, “Barco”); 
+	Aereos aereos=new Aereos(“Avioneta”, ”Helicoptero”); 
+	Terrestres terrestres=new Terrestres(“Automovil”, “Bicicleta”); 
+
+maritimo.mostrar(); 
+aereos.mostrar(); 
+terrestres.mostrar(); 
+
+} 
+
+}
